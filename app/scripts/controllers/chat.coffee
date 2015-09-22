@@ -7,11 +7,15 @@
  # # ChatCtrl
  # Controller of the chappieApp
 ###
-angular.module 'chappieApp'
-  .controller 'ChatCtrl', ->
+
+class ChatCtrl
+  ### @ngInject ###
+  constructor: () ->
     @awesomeThings = [
       'HTML5 Boilerplate'
       'AngularJS'
       'Karma'
     ]
-    return
+
+angular.module 'chappieApp'
+  .controller ChatCtrl
