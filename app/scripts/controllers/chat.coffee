@@ -17,5 +17,16 @@ class ChatCtrl
       'Karma'
     ]
 
+    @messages = [
+      {
+        user: 'ユーザー'
+        message: 'メッセージ'
+      }
+      {
+        user: 'ユーザー'
+        message: 'メッセージ'
+      }
+    ]
+
 angular.module 'chappieApp'
-  .controller ChatCtrl
+  .controller 'ChatCtrl', ChatCtrl

@@ -21,6 +21,8 @@ angular
     $routeProvider
       .when '/',
         templateUrl: 'views/chat.html'
+        controller: 'ChatCtrl'
+        controllerAs: 'chat'
       .when '/about',
         templateUrl: 'views/about.html'
         controller: 'AboutCtrl'
