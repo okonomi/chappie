@@ -6,5 +6,10 @@ angular.module 'chappie'
         templateUrl: "app/main/main.html"
         controller: "MainController"
         controllerAs: "main"
+      .state "chat",
+        url: "/chat"
+        templateUrl: "app/chat/chat.html"
+        controller: "ChatController"
+        controllerAs: "chat"
 
     $urlRouterProvider.otherwise '/'
