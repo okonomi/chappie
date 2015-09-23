@@ -9,24 +9,16 @@
 ###
 
 class ChatCtrl
-  ### @ngInject ###
-  constructor: () ->
-    @awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+  comments: []
 
-    @messages = [
-      {
-        user: 'ユーザー'
-        message: 'メッセージ'
-      }
-      {
-        user: 'ユーザー'
-        message: 'メッセージ'
-      }
-    ]
+  ### @ngInject ###
+  constructor: ($http) ->
+
+    $http.get(
+      'http://localhost:8080/comments'
+    ).success((data, status, headers, config) =>
+      @comments = data
+    )
 
 angular.module 'chappieApp'
   .controller 'ChatCtrl', ChatCtrl
