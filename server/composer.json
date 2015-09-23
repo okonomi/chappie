@@ -1,0 +1,8 @@
+{
+    "require": {
+        "silex/silex": "2.0.x-dev",
+        "asm89/stack-cors": "^0.2.1",
+        "stack/builder": "^1.0",
+        "stack/run": "^1.0"
+    }
+}
